@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+/* src/index.css */
+
+/* custom small helpers */
+/* body {
+  @apply bg-pink-300 text-gray-800;
+} */
+
+/* banner gradient helper */
+.bg-gradient-banner {
+  background: linear-gradient(135deg,#7c3aed 0%, #06b6d4 100%);
+}
