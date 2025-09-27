@@ -152,18 +152,38 @@ export default function TicketDashboard() {
   return (
     <div className="min-h-screen p-6 bg-gray-50">
       {/* Banner */}
-      <div className="rounded-xl overflow-hidden shadow-lg mb-6">
-        <div className="grid grid-cols-2">
-          <div className="p-8 bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
-            <div className="text-sm opacity-80">In-Progress</div>
-            <div className="text-5xl font-semibold mt-4">{inProgressCount}</div>
-          </div>
-          <div className="p-8 bg-gradient-to-r from-green-400 to-emerald-500 text-white">
-            <div className="text-sm opacity-80">Resolved</div>
-            <div className="text-5xl font-semibold mt-4">{resolvedCount}</div>
-          </div>
-        </div>
-      </div>
+<div className="rounded-xl overflow-hidden shadow-lg mb-6">
+  <div className="grid grid-cols-1 md:grid-cols-2">
+    {/* In-Progress */}
+    <div
+      className="relative flex flex-col items-center justify-center p-8 text-white bg-gradient-to-r from-purple-500 to-indigo-500"
+      style={{
+        backgroundImage: "url('/vector1.png')", // dist/public ফোল্ডারে রাখো
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+      }}
+    >
+      <div className="text-sm opacity-80">In-Progress</div>
+      <div className="text-5xl font-semibold mt-4">{inProgressCount}</div>
+    </div>
+
+    {/* Resolved */}
+    <div
+      className="relative flex flex-col items-center justify-center p-8 text-white bg-gradient-to-r from-green-400 to-emerald-500"
+      style={{
+        backgroundImage: "url('/vector1.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+      }}
+    >
+      <div className="text-sm opacity-80">Resolved</div>
+      <div className="text-5xl font-semibold mt-4">{resolvedCount}</div>
+    </div>
+  </div>
+</div>
+
 
       {/* Main section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
